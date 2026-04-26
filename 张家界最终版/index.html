@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>张家界高端旅游</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- 导航 -->
+<header id="header">
+<div class="nav">
+<div class="logo">ZJJ Travel</div>
+<ul>
+<li><a href="#hero">首页</a></li>
+<li><a href="#spots">景点</a></li>
+<li><a href="#package">套餐</a></li>
+</ul>
+</div>
+</header>
+
+<!-- Hero -->
+<section id="hero">
+<div class="hero-text">
+<h1>探索张家界奇幻世界</h1>
+<p>世界自然遗产 · 奇峰云海</p>
+<button onclick="scrollToSection()">立即探索</button>
+</div>
+</section>
+
+<!-- ⭐ 景点（10个，一行5个） -->
+<section id="spots" class="fade">
+<h2>热门景点</h2>
+
+<div class="cards">
+
+<div class="card"><img src="images/1.jpg"><h3>国家森林公园</h3><p>阿凡达灵感来源</p></div>
+<div class="card"><img src="images/2.jpg"><h3>天门山</h3><p>玻璃栈道</p></div>
+<div class="card"><img src="images/3.jpg"><h3>袁家界</h3><p>悬浮山奇观</p></div>
+<div class="card"><img src="images/4.jpg"><h3>黄石寨</h3><p>最佳观景台</p></div>
+<div class="card"><img src="images/5.jpg"><h3>金鞭溪</h3><p>森林徒步</p></div>
+
+<div class="card"><img src="images/6.jpg"><h3>十里画廊</h3><p>如画风景</p></div>
+<div class="card"><img src="images/7.jpg"><h3>宝峰湖</h3><p>高山湖泊</p></div>
+<div class="card"><img src="images/8.jpg"><h3>黄龙洞</h3><p>地下奇观</p></div>
+<div class="card"><img src="images/9.jpg"><h3>玻璃桥</h3><p>刺激体验</p></div>
+<div class="card"><img src="images/10.jpg"><h3>天子山</h3><p>云海日出</p></div>
+
+</div>
+</section>
+
+<!-- 套餐 -->
+<section id="package">
+<h2>精品套餐</h2>
+
+<div class="packages">
+
+<div class="package">
+<h3>经济3日游</h3>
+<p>森林公园</p>
+<p class="price">¥999</p>
+<button onclick="openModal()">立即预订</button>
+</div>
+
+<div class="package">
+<h3>经典5日游</h3>
+<p>森林公园 + 天门山</p>
+<p class="price">¥1999</p>
+<button onclick="openModal()">立即预订</button>
+</div>
+
+<div class="package">
+<h3>豪华7日游</h3>
+<p>全景 + 专车</p>
+<p class="price">¥3999</p>
+<button onclick="openModal()">立即预订</button>
+</div>
+
+</div>
+</section>
+
+<!-- 弹窗 -->
+<div id="modal">
+<div class="modal-box">
+<h3>提示</h3>
+<p>请联系右下角客服预订</p>
+<button onclick="closeModal()">关闭</button>
+</div>
+</div>
+
+<script src="script.js"></script>
+<!-- ⭐ 网站底部 -->
+<footer class="footer">
+
+<div class="footer-container">
+
+    <!-- 品牌 -->
+    <div class="footer-col">
+        <h3>ZJJ Travel</h3>
+        <p>专注张家界高端旅游服务，带你探索世界自然奇观。</p>
+    </div>
+
+    <!-- 导航 -->
+    <div class="footer-col">
+        <h4>快速导航</h4>
+        <ul>
+            <li><a href="#hero">首页</a></li>
+            <li><a href="#spots">景点</a></li>
+            <li><a href="#package">套餐</a></li>
+        </ul>
+    </div>
+
+    <!-- 联系方式 -->
+    <div class="footer-col">
+        <h4>联系我们</h4>
+        <p>📞 400-888-8888</p>
+        <p>📧 service@zjjtravel.com</p>
+        <p>📍 张家界市旅游服务中心</p>
+    </div>
+
+    <!-- 其他 -->
+    <div class="footer-col">
+        <h4>服务保障</h4>
+        <p>✔ 官方认证</p>
+        <p>✔ 无隐形消费</p>
+        <p>✔ 7×24客服</p>
+    </div>
+
+</div>
+
+<!-- 版权 -->
+<div class="footer-bottom">
+    <p>© 2026 ZJJ Travel | 湘ICP备123456号</p>
+</div>
+
+</footer>
+<!-- ⭐ 悬浮客服按钮 -->
+<div class="chat-float" onclick="toggleChat()">
+💬
+</div>
+
+<!-- ⭐ 客服面板 -->
+<div id="chat-panel">
+    <div class="chat-header">
+        在线客服
+        <span onclick="toggleChat()">✕</span>
+    </div>
+
+    <div class="chat-body">
+        <p>👋 欢迎咨询</p>
+        <p>请选择联系方式：</p>
+
+        <button onclick="openWhatsApp()">WhatsApp</button>
+        <button onclick="openTelegram()">Telegram</button>
+        <button onclick="showWeChat()">微信</button>
+    </div>
+</div>
+<!-- ⭐ 微信二维码弹窗 -->
+<div id="wechat-modal">
+    <div class="wechat-box">
+        <span class="close" onclick="closeWeChat()">✕</span>
+        <h3>添加客服微信</h3>
+        <img src="images/wechat.png" alt="微信二维码">
+        <p>请使用微信扫码添加客服</p>
+    </div>
+</div>
+</body>
+</html>
